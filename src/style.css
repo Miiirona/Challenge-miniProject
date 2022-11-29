@@ -1,10 +1,15 @@
-body {
-    background-color: tomato;
-  }
-  
- h1 {
-    color: aliceblue;
- }
-.font-color{
-    color: black;
+
+.first-line{
+    margin-bottom: 20px;
+}
+.first-line span{
+    font-size: 600;
+    font-weight: bold;
+}
+#result{
+    font-size: 600;
+    font-weight: bold;
+}
+.hidden{
+    display: none;
 }
