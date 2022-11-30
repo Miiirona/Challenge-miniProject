@@ -1,15 +1,30 @@
-
-.first-line{
-    margin-bottom: 20px;
+body{
+    background-color: green;
 }
-.first-line span{
-    font-size: 600;
-    font-weight: bold;
+h1{
+    color: white;
+    background-color: red;
+    border-radius: 15px;
+    padding: 15px;
+    position: absolute;
+    z-index: 3;
 }
-#result{
-    font-size: 600;
-    font-weight: bold;
+h2{
+    border: 4px dotted white;
+    border-radius: 15px;
+    padding: 60px 90px 10px 90px;
+    position: absolute;
+    top: 30px;
+    z-index: 2;
 }
-.hidden{
-    display: none;
+#img-light{
+    width: 100vw;
+    position: absolute;
+    z-index: 0;
+    opacity: 90%;
+}
+.boxes{
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
