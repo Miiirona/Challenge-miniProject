@@ -1,18 +1,42 @@
-const clockTitle = document.querySelector(".js-clock");
+const colors = [
+  "#ef5777",
+  "#575fcf",
+  "#4bcffa",
+  "#34e7e4",
+  "#0be881",
+  "#f53b57",
+  "#3c40c6",
+  "#0fbcf9",
+  "#00d8d6",
+  "#05c46b",
+  "#ffc048",
+  "#ffdd59",
+  "#ff5e57",
+  "#d2dae2",
+  "#485460",
+  "#ffa801",
+  "#ffd32a",
+  "#ff3f34"
+];
 
-function dTimeChristmas(){
-  const dateChristmas = new Date("2022-12-25 00:00:00");
-  const date = new Date();
+const button = document.querySelector("button");
 
-  const gap = dateChristmas - date;
+const body = document.body
 
+function onClickBtn() {
+  const firstRandomColor = colors[Math.floor(Math.random() * colors.length)] 
+  const secondRandomColor = colors[Math.floor(Math.random() * colors.length)];
+        // color Array에서 랜덤 추출해서 변수에 넣기 두 번
+  // const style = document.createElement("style");
+  //       //html element "style"만들어 변수 style에 넣기
+  // document.head.prepend(style);
+  //       //변수style(html요소 style)을 document.head에 추가하기
+  //       //html로 따지면 <style></style> 생성
+  // style.innerText = `body{background:linear-gradient(${firstRandomColor}, ${secondRandomColor})}`;
+  //       //<head><style>body{background:linear-gradient(${},${})}</style><head> 생성
 
-  const days = Math.floor(gap / (1000* 60 * 60 * 24));
-  const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000*60*60));
-  const minutes = Math.floor((gap % (1000*60*60)) / (1000*60));
-  const seconds = Math.floor((gap%(1000*60)) / 1000);
-  clockTitle.innerText = `${days}day ${hours}hour ${minutes}minute ${seconds}second`
+  // 그러나 정답은
+  body.style.background = `linear-gradient(${firstRandomColor},${secondRandomColor})`;
 }
 
-dTimeChristmas();
-setInterval(dTimeChristmas, 1000)
+button.addEventListener("click", onClickBtn);
